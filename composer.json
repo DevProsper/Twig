@@ -1,0 +1,12 @@
+{
+    "name": "devprosper/twig",
+    "authors": [
+        {
+            "name": "Prosper NGOUARI",
+            "email": "prosperngouari38@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^1.0"
+    }
+}
