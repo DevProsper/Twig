@@ -11,12 +11,20 @@ class ComposerStaticInitfe0866392a5dc0bb57d782024bc79f35
         array (
             'Twig\\' => 5,
         ),
+        'M' => 
+        array (
+            'Michelf\\' => 8,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
+        'Michelf\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/michelf/php-markdown/Michelf',
         ),
     );
 

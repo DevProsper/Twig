@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
+    'Michelf\\' => array($vendorDir . '/michelf/php-markdown/Michelf'),
 );

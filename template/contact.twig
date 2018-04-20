@@ -1,0 +1,11 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+    {% for tutoriel in tutoriels %}
+        {{ markdom(tutoriel.titre) }}
+    {% endfor %}
+{% endblock %}
+
+{% block aside %}
+    Un autre aside
+{% endblock %}

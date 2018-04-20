@@ -7,6 +7,7 @@
         }
     ],
     "require": {
-        "twig/twig": "^1.0"
+        "twig/twig": "^1.0",
+        "michelf/php-markdown": "^1.8"
     }
 }
