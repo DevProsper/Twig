@@ -1,5 +1,6 @@
 <?php
 require 'vendor/autoload.php';
+require 'MonExtension.php';
 
 //ROUTING
 $page = "home";
@@ -19,10 +20,20 @@ $loader = new Twig_Loader_Filesystem(__DIR__ .'/template');
 $twig = new Twig_Environment($loader,[
     //'cache' => __DIR__ .'/tmp'
 ]);
-//Pour afficher une fonction
-$twig->addFunction(new Twig_SimpleFunction('markdom', function($value){
-    return  "Je ne comprends pas le mot" .$value;
-}));
+
+//Pour créer une fonction
+/*$twig->addFunction(new Twig_SimpleFunction('markdom', function($value){
+    //Affiche les balises html renvoyées par la bdd
+    return \Michelf\MarkdownExtra::defaultTransform($value);
+    //elle peut être utiliser de la sorte markmom({{tutoriel.name}})
+}, ['is_safe' => ['html']]));
+
+//Pour créer un filter
+$twig->addFilter(new Twig_SimpleFilter('mardom', function($value){
+    return \Michelf\MarkdownExtra::defaultTransform($value);
+    //elle peut être utiliser de la sorte {{tutoriel.name | markdowm}}
+}));*/
+$twig->addExtension(new MonExtension());
 switch($page){
     case 'contact':
         echo $twig->render('contact.twig', compact('tutoriels'));
